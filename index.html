@@ -8,143 +8,77 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./index.css">
   </head>
   <body>
-<br><br><br><br><br>
 
 <div class="container">
-    <div class="baitap1">
-        <h2>Tính điểm trung bình</h2>
-        <br>
-        <div class="monhoc">
-        <h3>Toán</h3>
-        <input type="number" id="bt1__math">
-        <h3>Lý</h3>
-        <input type="number" id="bt1__physics">
-        <h3>Hoá</h3>
-        <input type="number" id="bt1__bio">
-    </div>
-        <div class="uutien">
-        <h4>Vùng ưu tiên</h4>
-        <ul>
-            <li>
-                <input type="radio" name="vung" id="vung__a" value="2">
-                vùng 1   
-            </li>
-            <li>
-                <input type="radio" name="vung" id="vung__b" value="1">
-                vùng 2    
-            </li>
-            <li>
-                <input type="radio" name="vung" id="vung__c" value="0.5">
-                vùng 3    
-            </li>
-            <li>
-                <input type="radio" name="vung" id="khong__co" value="0">
-                Không có    
-            </li>
-        </ul>
-        <h4>Đối tượng ưu tiên</h4>
-        <ul>
-            <li>
-                <input type="radio" name="doituong" id="doituong__1" value="2.5">
-                Đối tượng 1
-            </li>
-            <li>
-                <input type="radio" name="doituong" id="doituong__2" value="1.5">
-                Đối tượng 2
-            </li>
-            <li>
-                <input type="radio" name="doituong" id="doituong__3" value="1">
-                Đối tượng 3
-            </li>
-            <li>
-                <input type="radio" name="doituong" id="doituong__0" value="0">
-                Không có
-            </li>
-        </ul>
-    </div>
-        <button onclick="tinhketqua()">Kết Quả</button>
+  <div class="baitap" id="baitap1">
+    <h4>Tìm số nguyên dương nhỏ nhất sao cho 1 + 2 + 3 + ... + n > max</h4>
+    <input type="text" id="timsonhonhat" placeholder="Nhập số max vào đây">
+    <button onclick="timson()">Tính</button>
     <div id="ketqua"></div>
+  </div>
 
-    </div>
-    
-    <br><br><br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+  <div class="baitap" id="baitap2">
+    <h4>Nhập hai số x và n tìm tổng dãy số S(n) = 1 + x^2 + x^3 + ... + x^n</h4>
+    <input type="text" id="nhapsox" placeholder="Nhập x vào đây">
+    <input type="text" id="nhapson" placeholder="Nhập n vào đây">
+    <button onclick="timsoS()">Tính</button>
+    <div id="ketqua111"></div>
+  </div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="baitap" id="baitap3">
+  <h4>Tìm tổng S(n) = 1 x 2 x 3 x ... x n</h4>
+  <input type="text" id="timtichtaiday" placeholder="Nhập số max vào đây">
+  <button onclick="timtich()">Tính</button>
+  <div id="ketqua222"></div>
+</div>
 
 
 
-    <div class="baitap2">
-        <h2>Tính tiền điện</h2>
-        <br>
-        <div class="thongtin">
-        <h4>Nhập tên khách hàng</h4>
-        <input type="text" id="tenkhachhang">
-        <h4>Nhập số điện tiêu thụ (kw)</h4>
-        <input type="number" id="sodientieuthu">
-    </div>
-        <button onclick="inhoadon1()">In Hoá Đơn</button>
-        <br><br>
-        <div class="hoadon">
-            <h5>HOÁ ĐƠN TIỀN ĐIỆN</h5>
-            <h6 id="hovaten">Khách hàng:</h6>
-            <h6 id="sodiendatieuthu">Số điện sử dụng:</h6>
-            <h6 id="tongtienthanhtoan">Số tiền cần thanh toán:</h6>
-        </div>
-    </div>
-    
-    <br><br><br><br>
 
 
 
-    <div class="baitap3">
-        <h2>Tính thuế thu nhập cá nhân</h2>
-        <br>
-        <h3>Tên người nộp thuế</h3>
-        <input type="text" id="tennguoinop">
-        <h3>Tổng thu nhập một năm</h3>
-        <input type="number" id="tongthunhap">
-        <h3>Số người phụ thuộc</h3>
-        <input type="number" id="nguoiphuthuoc">
-        <button onclick="tinhthue()">Tính Thuế</button>
-        <div class="bienlaithue">
-            <h5>BIÊN LAI THUẾ THU NHẬP CÁ NHÂN</h5>
-            <h6 id="hotennguoinop">Người nộp thuế:</h6>
-            <h6 id="thunhapmoinam">Tổng thu nhập mỗi năm:</h6>
-            <h6 id="tongsonguoiphuthuoc">Số người phụ thuộc:</h6>
-            <h6 id="tongthunhapphainopthue">Tổng thu nhập chịu thuế:</h6>
-            <h6 id="sothuephainop">Số thuế phải nộp:</h6>
-        </div>
-    </div>
 
-    <br><br><br><br><br><br><br><br>
+<div class="baitap" id="baitap4">
+  <div id ="demo">In ra thẻ div </div>
 
-    <div class="baitap4">
-        <h2>Tính tiền cáp</h2>
-        <h5>Mã khách hàng</h5>
-        <input id="makhach" type="text">
-        <h5>Loại khách hàng</h5>
-        <ul>
-            <li><input type="radio" name="loai" id="canhan__1" value="0">Cá Nhân</li>
-            <li><input type="radio" name="loai" id="doanhnghiep__1" value="1">Doanh Nghiệp</li>
-        </ul>
-        <button onclick="chonloaikhachhang()">Xác nhận loại khách hàng</button>
-        <div class="soketnoihide" id="anhienne">
-        <h5>Số kết nối</h5>
-        <input id="ketnoi" type="text">
-        </div>
-        <div class="soketnoihide" id="anhienne1">
-        <h5>Số kênh cao cấp</h5>
-        <input id="kenhcaocap" type="text">
-        <button onclick="tinhtiencap()">Tính tiền cáp</button>
-        <div class="hoadoncap">
-            <h5>HOÁ ĐƠN CÁP MẠNG</h5>
-            <h6 id="makhachhangla">Mã khách hàng:</h6>
-            <h6 id="tongtienphaithanhtoanla">Tổng tiền:</h6>
-        </div>
-        </div>
-    </div>
+  <button onclick="add_child()">KẾT QUẢ</button>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+<div class="baitap" id="baitap5">
+  <h4>IN RA DÃY SỐ NGUYÊN TỐ TỪ 1 TỚI N</h4>
+  <input type="text" id="inrasonguyento" placeholder="Nhập số n vào đây">
+  <button onclick="kiem_tra_snt()">KIỂM TRA</button>
+  <div id="ketqua555"></div>
+</div>
+
+
+
+
+
 
 </div>
 
@@ -163,31 +97,11 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="./baitap/baitap.js"></script>
+    <script src="./index.js"></script>
   </body>
 </html>
